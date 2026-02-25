@@ -45,12 +45,12 @@ This is the official implementation of the paper [CLOT: Closed-Loop Global Motio
 Our paper offers a general-purpose action tracking strategy within a global closed-loop framework, together with a large-scale human motion dataset.
 
 This repository includes:
-- Multi-simulator support
+- **Multi-simulator support**
   - Support multiple simulators including IsaacGym, IsaacSim, and MjLab (with MjLab as a primary simulator).
-- Efficient RL training
+- **Efficient RL training**
   - Support multi-GPU parallel training for large-scale experiments.
-- AMP-based rewards
-  - Implementation of AMP-style discriminator rewards for motion imitation policies.
+- **AMP rewards**
+  - Implementation of AMP discriminator rewards for motion imitation policies.
 
 Below are the installation and usage instructions for the code in the mjlab environment.
 
