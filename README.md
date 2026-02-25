@@ -51,6 +51,8 @@ This repository includes:
   - Support multi-GPU parallel training for large-scale experiments.
 - **AMP rewards**
   - Implementation of AMP discriminator rewards for motion imitation policies.
+- **Transformer backbone**
+  - Our project supports both MLP and Transformer networks as the policy backbone.
 
 Below are the installation and usage instructions for the code in the mjlab environment.
 
