@@ -1,0 +1,127 @@
+# @package _global_
+
+rewards:
+  set_reward: Tengjie
+  set_reward_date: 20251015
+  only_positive_rewards: False
+  reward_scales:
+      joint_pos: 1.6 # 1.6
+      feet_clearance: 1.  #0.
+      feet_contact_number: 1.2  # 2
+      # gait
+      feet_air_time: 1. # 0.
+      foot_slip: -0.05 # -0.05
+      feet_distance: 0. # 0.
+      knee_distance: 0. # 0.
+      # contact
+      feet_contact_forces: -0.1 # -0.1
+      # vel tracking
+      tracking_lin_vel: 1.2
+      tracking_ang_vel: 1.1
+      vel_mismatch_exp: 0.5  # lin_z; ang x,y
+      low_speed: 0.2
+      track_vel_hard: 0.5
+      # gait
+      gait_feet_distance: 0.5 # 0.2
+      gait_swing_symmetric: 0.
+      feet_orien_forward: 0.5  #0.5
+      #feet_orientation = 0.5 
+      # feet_position = 0.2
+      # base pos
+      default_joint_pos: 0.5 # 0.2
+      default_arm: 0.5 # 0.5
+      default_torso: 0.5
+      orientation: 1.
+      torso_orientation: 1.0
+      base_height: 0.2 # 0.2 # 1.0
+      base_acc: 0.2
+      # energy
+      action_smoothness: -1. # -0.02, 1.5
+      torques: -1e-4  #-1e-5
+      dof_vel: -1e-3 #-5e-4
+      dof_acc: -1e-6 # -1e-7
+      collision: -10.
+  
+
+
+  reward_tracking_sigma: 0.25
+  reward_limit:
+    soft_dof_pos_limit: 0.9
+    soft_dof_vel_limit: 0.9
+    soft_torque_limit: 0.825
+
+    reward_limits_curriculum:
+      soft_dof_pos_curriculum: False
+      soft_dof_pos_initial_limit: 1.15
+      soft_dof_pos_max_limit: 1.15
+      soft_dof_pos_min_limit: 0.95
+      soft_dof_pos_curriculum_degree: 0.00000025
+      soft_dof_pos_curriculum_level_down_threshold: 40
+      soft_dof_pos_curriculum_level_up_threshold: 42
+
+      soft_dof_vel_curriculum: False
+      soft_dof_vel_initial_limit: 1.15
+      soft_dof_vel_max_limit: 1.25
+      soft_dof_vel_min_limit: 0.95
+      soft_dof_vel_curriculum_degree: 0.00000025
+      soft_dof_vel_curriculum_level_down_threshold: 40
+      soft_dof_vel_curriculum_level_up_threshold: 42
+
+      soft_torque_curriculum: False
+      soft_torque_initial_limit: 1.15
+      soft_torque_max_limit: 1.25
+      soft_torque_min_limit: 0.85
+      soft_torque_curriculum_degree: 0.00000025
+      soft_torque_curriculum_level_down_threshold: 40
+      soft_torque_curriculum_level_up_threshold: 42
+
+  feet_height_target: 0.12
+  max_contact_force: 700
+  base_height_target: 0.88
+
+  desired_feet_air_time_min: 0.2
+  desired_feet_air_time_max: 0.8
+
+  target_feet_height: 0.1
+
+  min_dist: 0.2
+  max_dist: 0.5
+
+  cycle_time: 0.8
+
+  target_joint_pos_scale: 0.1
+  
+  clearance_height_target: -0.66
+  least_feet_distance: 0.18
+  least_feet_distance_lateral: 0.18
+  desired_feet_max_height_for_this_air: 0.6
+  desired_feet_min_height_for_this_air: 0.12
+  desired_base_height: 0.88
+  close_feet_threshold: 0.15
+
+  reward_penalty_curriculum: True
+  reward_initial_penalty_scale : 0.1
+  reward_min_penalty_scale: 0.0
+  reward_max_penalty_scale: 1.0
+  reward_penalty_level_down_threshold: 400
+  reward_penalty_level_up_threshold: 700
+  reward_penalty_degree: 0.00001
+  num_compute_average_epl: 10000
+
+  command_curriculum: False
+  command_initial_value: 1.0
+  command_max_value: 1.0
+  command_min_value: 0.0
+  command_curriculum_degree: 0.00005
+  command_curriculum_level_down_threshold: 400
+  command_curriculum_level_up_threshold: 700
+
+  reward_penalty_reward_names : [
+    "foot_slip",
+    "action_smoothness",
+    "dof_acc",
+    "feet_contact_forces",
+    "torques",
+    "dof_vel",
+    "default_torso"
+  ]

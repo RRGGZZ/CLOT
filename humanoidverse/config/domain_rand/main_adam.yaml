@@ -1,0 +1,120 @@
+# @package _global_
+# Modified from `redr1l.yaml`
+
+defaults:
+  - domain_rand_base
+
+domain_rand:
+  reinit_epis_rand: -1
+  
+  _push_fixed: True
+  push_robots : True
+  push_robots_interval_curriculum: True
+  push_robots_interval: 20
+  push_robots_level_down_threshold: 0.2
+  push_robots_level_up_threshold: 0.95
+  push_robots_level_degree: 0.000015
+  push_robots_range: [1, 50]
+  push_interval_s : [3, 6]
+  max_push_vel_xy : 0.2
+  randomize_base_com : True
+  base_com_range: #kg
+      x : [-0.08, 0.08]
+      y : [-0.08, 0.08]
+      z : [-0.10, 0.10]
+
+  randomize_link_mass : True
+  link_mass_range : [0.9, 1.1] # *factor
+  randomize_link_com : True
+  link_com_range: #m 
+      x : [-0.02, 0.02]
+      y : [-0.02, 0.02]
+      z : [-0.02, 0.02]
+  randomize_link_body_names: [
+    'pelvis', 'hipPitchLeft', 'hipRollLeft', 'thighLeft', 'shinLeft',
+    'hipPitchRight', 'hipRollRight', 'thighRight', 'shinRight',
+     'shoulderPitchLeft', 'shoulderRollLeft', 'shoulderYawLeft', 'elbowLeft',
+    'shoulderPitchRight', 'shoulderRollRight', 'shoulderYawRight', 'elbowRight',
+  ]
+
+  randomize_link_inertia : True
+  link_inertia_range : [0.85,1.15] # *factor
+  randomize_link_inertia_names : [
+    'pelvis', 'hipPitchLeft', 'hipRollLeft', 'thighLeft', 'shinLeft',
+    'hipPitchRight', 'hipRollRight', 'thighRight', 'shinRight', 
+    'shoulderPitchLeft', 'shoulderRollLeft', 'shoulderYawLeft', 'elbowLeft',
+    'shoulderPitchRight', 'shoulderRollRight', 'shoulderYawRight', 'elbowRight',
+  ]
+
+  heavy_upper: 
+    enable: False
+    ratio: 1.1 # all mass and inertia are scaled by this ratio
+    body_names: [
+        'torso', 
+        'shoulderPitchLeft', 'shoulderRollLeft', 'shoulderYawLeft', 'elbowLeft', 
+        'shoulderPitchRight', 'shoulderRollRight', 'shoulderYawRight', 'elbowRight'
+    ]
+  randomize_pd_gain : True
+  kp_range : [0.9, 1.1]
+  kd_range : [0.9, 1.1]
+
+  parallel_serial_pd:
+    # multiplicative composition with randomize_pd_gain, not replacing it
+    enable: False
+    ratio: [0.8, 1.2] 
+    joint_idx: [4,5, 10,11, 13,14]
+
+
+  randomize_friction : True
+  friction_range : [0.8, 1.5]
+  randomize_restitution : False
+  restitution_range : [0.0, 1.0]
+
+  randomize_base_mass : False # replaced by randomize_link_mass
+  added_mass_range : [-5., 10.]  
+  
+  randomize_torque_rfi : True
+  use_rao : True
+  rao_lim : 0.05
+  rfi_lim : 0.05
+  randomize_rfi_lim : True
+  rfi_lim_range : [0.5, 1.5]
+
+  randomize_ctrl_delay : True
+  ctrl_delay_step_range : [0, 2] # integer max real delay is 90ms
+
+  randomize_motion_ref_xyz: False # head only for now
+  motion_ref_xyz_range : [[-0.02, 0.02],[-0.02, 0.02],[-0.1, 0.1]]
+
+  motion_package_loss: False
+  package_loss_range: [1, 10] # dt = 0.02s, delay for 0.02s - 0.2s
+  package_loss_interval_s : 2
+
+
+  born_offset : False
+  born_offset_curriculum: False
+  born_offset_level_down_threshold: 0.2
+  born_offset_level_up_threshold: 0.95
+  level_degree: 0.00002
+  born_distance : 0.0001
+  born_offset_range: [0.0, 0.8]
+  born_offset_possibility : 1.0
+
+  born_heading: False
+  born_heading_curriculum: False
+  born_heading_randomization : False
+  born_heading_level_down_threshold: 0.2
+  born_heading_level_up_threshold: 0.95
+  born_heading_degree: 0.005
+  born_heading_range: [0, 120]
+  born_heading_level_degree: 0.00002
+
+  motion_time_advance: True
+  advance_level_down_threshold: 0.2
+  advance_level_up_threshold: 0.95
+  advance_degree: 0.000005
+  appaly_advance_interval: 2
+  appaly_advance_range: [1, 2]
+  advance_interval_s: [3, 4]
+  advance_initial_degree: 1.5
+  advance_range: [0.5, 1.5] #s

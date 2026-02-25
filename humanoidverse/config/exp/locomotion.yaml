@@ -1,0 +1,6 @@
+defaults:
+  # - /algo: ppo
+  - /algo: mh_ppo
+  - /env: locomotion
+
+experiment_name: TEST_Locomotion
