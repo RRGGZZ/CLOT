@@ -110,14 +110,12 @@ If you want to change the number of GPUs used for training, please modify `ngpu`
 If you find our work helpful, please cite:
 
 ```bibtex
-@misc{zhu2026clotclosedloopglobalmotion,
-      title={CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation}, 
-      author={Tengjie Zhu and Guanyu Cai and Yang Zhaohui and Guanzhu Ren and Haohui Xie and ZiRui Wang and Junsong Wu and Jingbo Wang and Xiaokang Yang and Yao Mu and Yichao Yan and Yichao Yan},
-      year={2026},
-      eprint={2602.15060},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2602.15060}, 
+@article{zhu2026clot,
+  title={CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation},
+  author={Zhu, Tengjie and Cai, Guanyu and Zhaohui, Yang and Ren, Guanzhu and Xie, Haohui and Wang, ZiRui and Wu, Junsong and Wang, Jingbo and Yang, Xiaokang and Mu, Yao and others},
+  journal={arXiv preprint arXiv:2602.15060},
+  year={2026}
+}
 }
 ```
 
