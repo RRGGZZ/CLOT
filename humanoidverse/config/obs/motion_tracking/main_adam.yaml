@@ -151,7 +151,7 @@ obs:
   noise_initial_value: 0.1
   noise_value_max: 1.0
   noise_value_min: 0.05
-  soft_dof_pos_curriculum_degree: 0.000008
+  soft_dof_pos_curriculum_degree: 0.000003
   soft_dof_pos_curriculum_level_down_threshold: 0.2
   soft_dof_pos_curriculum_level_up_threshold: 0.95
 

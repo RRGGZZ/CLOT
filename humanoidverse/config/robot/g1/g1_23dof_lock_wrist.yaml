@@ -117,35 +117,35 @@ robot:
     control_type: P
     # PD Drive parameters:
     stiffness: # [N*m/rad]
-      hip_yaw: 100
-      hip_roll: 100
-      hip_pitch: 100
-      knee: 150
-      ankle_pitch: 40
-      ankle_roll: 40
-      waist_yaw: 400
-      waist_roll: 400
-      waist_pitch: 400
-      shoulder_pitch: 100
-      shoulder_roll: 100
-      shoulder_yaw: 50
-      elbow: 50
+      hip_yaw: 40.17923863450712
+      hip_roll: 99.09842777666111
+      hip_pitch: 40.17923863450712
+      knee: 99.09842777666111
+      ankle_pitch: 28.50124619574858
+      ankle_roll: 28.50124619574858
+      waist_yaw: 40.17923863450712
+      waist_roll: 28.50124619574858
+      waist_pitch: 28.50124619574858
+      shoulder_pitch: 14.25062309787429
+      shoulder_roll: 14.25062309787429
+      shoulder_yaw: 14.25062309787429
+      elbow: 14.25062309787429
 
 
     damping: # [N*m/rad]  # [N*m*s/rad]
-      hip_yaw: 2.0
-      hip_roll: 2.0
-      hip_pitch: 2.0
-      knee: 4.0
-      ankle_pitch: 2.0
-      ankle_roll: 2.0
-      waist_yaw: 5.0
-      waist_roll: 5.0
-      waist_pitch: 5.0
-      shoulder_pitch: 2.0
-      shoulder_roll: 2.0
-      shoulder_yaw: 2.0
-      elbow: 2.0
+      hip_yaw: 2.557889775413375
+      hip_roll: 6.308801853496639
+      hip_pitch: 2.557889775413375
+      knee: 6.308801853496639
+      ankle_pitch: 1.814445686584846
+      ankle_roll: 1.814445686584846
+      waist_yaw: 2.557889775413375
+      waist_roll: 1.814445686584846
+      waist_pitch: 1.814445686584846
+      shoulder_pitch: 0.907222843292423
+      shoulder_roll: 0.907222843292423
+      shoulder_yaw: 0.907222843292423
+      elbow: 0.907222843292423
 
     # action scale: target angle = actionScale * action + defaultAngle
     action_scale: 0.25
