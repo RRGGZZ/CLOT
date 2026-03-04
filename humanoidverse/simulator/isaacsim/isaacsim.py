@@ -272,7 +272,7 @@ class IsaacSim(BaseSimulator):
         spawn=sim_utils.UrdfFileCfg(
             fix_base=False,
             replace_cylinders_with_capsules=True,
-            asset_path="humanoidverse/data/robots/adam_sp/adam_sp.urdf",
+            asset_path="/home/szsh/ztj/CLOT/humanoidverse/data/robots/adam_pro/adam_pro.urdf",
             activate_contact_sensors=True,
             rigid_props=sim_utils.RigidBodyPropertiesCfg(
                 disable_gravity=False,

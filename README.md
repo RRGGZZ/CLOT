@@ -77,6 +77,12 @@ We have currently uploaded about 10 hours of data to Hugging Face, including BVH
 git lfs install
 git clone https://huggingface.co/datasets/Zhutengjie/human_motion
 ```
+If you want to visualize the data results:
+```bash
+python visualize.py human_motion/adam_data_30fps_cont_mask.pkl humanoidverse/data/robots/adam_pro/adam_pro.xml
+# or
+python visualize.py human_motion/g1_data_50fps_cont_mask.pkl humanoidverse/data/robots/g1/g1_23dof_lock_wrist.xml
+```
 ## Test
 
 If you want to test the checkpoints in the mjlab environment:
