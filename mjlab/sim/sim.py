@@ -140,6 +140,8 @@ class Simulation:
     self.forward_graph = None
     if self.use_cuda_graph:
       with wp.ScopedDevice(self.wp_device):
+        mjwarp.step(self.wp_model, self.wp_data)  # warmup: force JIT before capture
+        mjwarp.forward(self.wp_model, self.wp_data)  # warmup: force JIT before capture
         with wp.ScopedCapture() as capture:
           mjwarp.step(self.wp_model, self.wp_data)
         self.step_graph = capture.graph

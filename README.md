@@ -68,6 +68,9 @@ conda create -n clot python=3.11
 pip install warp-lang --extra-index-url https://pypi.nvidia.com/
 pip install "mujoco-warp @ git+https://github.com/google-deepmind/mujoco_warp@502556df5e44d79d6bdaa64361669602b5a206cf"
 
+git clone https://github.com/zhutengjie/CLOT.git
+cd CLOT
+
 pip install -e .
 ```
 

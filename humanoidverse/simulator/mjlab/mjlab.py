@@ -333,7 +333,7 @@ class MJlab(BaseSimulator):
 
         if "startup" in self.event_manager.available_modes:
             self.event_manager.apply(mode="startup")
-            self.sim.create_graph()
+#            self.sim.create_graph()  # disabled: causes CUDA error 900
             
             # 验证域随机化（可选）
             logger.info("=" * 60)
